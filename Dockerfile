@@ -4,6 +4,7 @@ FROM rust:1.90-slim-bookworm AS base
 
 WORKDIR /book
 
+COPY theme theme
 COPY book.toml .
 
 RUN cargo install mdbook mdbook-mermaid \
